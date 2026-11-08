@@ -1,0 +1,8 @@
+[
+  { "id": "r1", "name": "De Blauwe Lepel",  "city": "Enschede", "cuisine": "Dutch / European" },
+  { "id": "r2", "name": "Sakura Ramen Bar", "city": "Enschede", "cuisine": "Japanese" },
+  { "id": "r3", "name": "Casa Mariposa",    "city": "Enschede", "cuisine": "Spanish tapas" },
+  { "id": "r4", "name": "Green Fork",       "city": "Hengelo",  "cuisine": "Vegetarian" },
+  { "id": "r5", "name": "Trattoria Nonna",  "city": "Enschede", "cuisine": "Italian" },
+  { "id": "r6", "name": "Bazaar Grill",     "city": "Enschede", "cuisine": "Turkish" }
+]

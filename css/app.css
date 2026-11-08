@@ -1,0 +1,174 @@
+/* Layout gaps beer.css doesn't cover. No hex here — tokens.css only. */
+
+body { font-family: var(--font); }
+
+#app {
+  padding: var(--space-md);
+  padding-bottom: 96px; /* clear the bottom nav on small screens */
+  max-width: 900px;
+  margin-inline: auto;
+}
+
+@media (min-width: 993px) {
+  #app { padding-bottom: var(--space-xl); }
+}
+
+/* --- brand bar ---
+   The wordmark is supplied as artwork, so the Racing Sans One fallback below
+   is only used where the image can't be shown. */
+#brand {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background: none; /* beer.css gives <header> a surface fill of its own */
+  width: 100%;
+  min-height: 0;   /* beer.css sizes <header> like an app bar */
+  padding-block: var(--space-md) var(--space-sm);
+  padding-left: max(var(--space-md), env(safe-area-inset-left, 0px));
+  padding-right: max(var(--space-md), env(safe-area-inset-right, 0px));
+  max-width: 900px;
+  margin-inline: auto;
+}
+#brand img { height: 26px; width: auto; margin: 0 auto 0 0; }
+
+/* The nav bars inside <app-nav> are fixed-position, but the custom element
+   itself is still a block in the flow and was reserving ~80px of empty space
+   between the brand bar and the page heading. */
+app-nav { display: contents; }
+
+/* the brand bar already provides the top space; the first heading of a view
+   must not add its own on top of it */
+#app > .stack > :first-child { margin-top: 0; }
+#app { padding-top: var(--space-md); }
+
+@media (min-width: 993px) {
+  /* clear the left rail */
+  #brand { margin-left: 0; padding-left: 96px; }
+}
+
+.wordmark {
+  font-family: var(--font-display);
+  font-style: italic;
+  letter-spacing: 0.01em;
+}
+
+.sr-only {
+  position: absolute; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip-path: inset(50%); white-space: nowrap;
+}
+
+/* --- severity scale: weight, not hue. See AGENTS.md --- */
+.sev { border-radius: var(--rounded-pill); font-weight: 600; }
+.sev-mild     { background: var(--secondary); color: var(--on-secondary); }
+.sev-moderate { background: var(--primary);   color: var(--on-primary); }
+.sev-severe   { background: var(--tertiary);  color: var(--on-tertiary); }
+
+/* A severity must never be carried by colour alone — it always ships with a
+   label and an icon. These rules only style the container. */
+
+.loading-state {
+  display: grid;
+  justify-items: center;
+  gap: var(--space-sm);
+  padding-block: var(--space-xl);
+}
+
+/* Every venue, dish and report in this prototype is invented. The badge keeps
+   that true even in a screenshot taken out of context. */
+.demo-badge {
+  margin-left: auto;
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  background: var(--secondary-container);
+  color: var(--on-secondary-container);
+  border-radius: var(--rounded-pill);
+  padding: 0.25rem 0.6rem;
+}
+
+/* --- the empty state is the most common state in this app --- */
+.unknown-state {
+  border: 2px dashed var(--outline-variant);
+  border-radius: var(--rounded-lg);
+  padding: var(--space-lg);
+  text-align: center;
+}
+.unknown-state i { font-size: 2.5rem; opacity: 0.6; }
+
+/* --- report card --- */
+app-report-card { display: block; }
+app-report-card + app-report-card { margin-top: var(--space-md); }
+.report .meta { font-size: 0.8rem; color: var(--on-surface-variant); }
+
+.stack > * + * { margin-top: var(--space-md); }
+.row-gap { gap: var(--space-sm); display: flex; flex-wrap: wrap; align-items: center; }
+
+/* beer.css chips sit tight by default in wrapped rows */
+.chips { display: flex; flex-wrap: wrap; gap: var(--space-sm); }
+
+.muted { color: var(--on-surface-variant); }
+.tiny  { font-size: 0.78rem; }
+
+/* testimony framing: the phrase that keeps the app honest */
+.testimony-note {
+  border-left: 4px solid var(--primary);
+  border-radius: 0; /* beer.css rounds block elements; the rule must read as a rule */
+  padding-left: var(--space-md);
+  font-size: 0.85rem;
+  color: var(--on-surface-variant);
+}
+
+/* beer.css headings are sized for desktop; at phone width a two-word dish name
+   wrapped to three lines and pushed the content out of the first screen. */
+h1 { font-size: 1.75rem; line-height: 1.15; text-wrap: balance; }
+h2 { font-size: 1.15rem; line-height: 1.25; text-wrap: balance; }
+
+@media (min-width: 601px) {
+  h1 { font-size: 2.25rem; }
+  h2 { font-size: 1.4rem; }
+}
+
+/* beer.css radios and checkboxes are inline; stacked choices ran together on
+   one line, so the severity question read as a sentence rather than a choice. */
+label.radio, label.checkbox { display: flex; align-items: center; gap: var(--space-sm); }
+
+/* severity chips carry two words and must not clip them */
+.sev { height: auto; min-height: 2rem; padding-block: var(--space-sm); }
+
+.login-logo { height: 34px; width: auto; }
+
+/* The router moves focus to each view's heading for screen readers. That must
+   not paint a focus ring for people who navigated by mouse or touch. */
+#app h1[tabindex]:focus,
+#app h2[tabindex]:focus { outline: none; }
+
+#app > .stack > h1:first-child:has(.login-logo) { margin-top: var(--space-lg); }
+
+/* --- overflow ---------------------------------------------------------
+   beer.css lays cards and chips out as fixed-height flex rows, which suits
+   short labels. Dish names, symptom text and user-typed allergen names are
+   none of those, so they were overflowing their containers. */
+
+article > a { display: block; min-width: 0; }
+
+article, article * { min-width: 0; }
+
+h1, h2, h3, h6, p, span, div { overflow-wrap: anywhere; }
+
+/* chips must grow to fit their label rather than clip it */
+.chip {
+  height: auto;
+  min-height: 2rem;
+  padding-block: 0.4rem;
+  white-space: normal;
+  text-align: left;
+  line-height: 1.3;
+}
+
+/* the row that holds a field + its Add button stacks at phone width */
+.row-gap > .field { min-width: 0; }
+
+/* allergen list: severity only once the allergen applies to you */
+.allergen-row { padding-block: var(--space-sm); }
+.allergen-row:not(.on) .severity-field { display: none; }

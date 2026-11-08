@@ -1,0 +1,53 @@
+[
+  {
+    "id": "u1",
+    "name": "Maya",
+    "handle": "mayaeats",
+    "email": "maya@safebites.demo",
+    "password": "demo1234",
+    "bio": "Seafood allergy since childhood. I log everything, mostly so I stop forgetting.",
+    "allergens": [
+      { "id": "seafood", "severity": "severe" },
+      { "id": "sulphite", "severity": "mild" }
+    ]
+  },
+  {
+    "id": "u2",
+    "name": "Tom",
+    "handle": "t_doesnt_bake",
+    "email": "tom@safebites.demo",
+    "password": "demo1234",
+    "bio": "Coeliac. Cautiously optimistic about pizza.",
+    "allergens": [{ "id": "gluten", "severity": "moderate" }]
+  },
+  {
+    "id": "u3",
+    "name": "anon_7",
+    "handle": "anon_7",
+    "email": "anon7@safebites.demo",
+    "password": "demo1234",
+    "bio": "",
+    "allergens": [{ "id": "peanut", "severity": "severe" }]
+  },
+  {
+    "id": "u4",
+    "name": "Priya",
+    "handle": "priyaroams",
+    "email": "priya@safebites.demo",
+    "password": "demo1234",
+    "bio": "Dairy and egg. Dessert menus are my nemesis.",
+    "allergens": [
+      { "id": "dairy", "severity": "moderate" },
+      { "id": "egg", "severity": "mild" }
+    ]
+  },
+  {
+    "id": "u5",
+    "name": "Jonas",
+    "handle": "jonas_nl",
+    "email": "jonas@safebites.demo",
+    "password": "demo1234",
+    "bio": "Tree nuts. Always ask, never assume.",
+    "allergens": [{ "id": "treenut", "severity": "severe" }]
+  }
+]

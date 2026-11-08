@@ -1,0 +1,23 @@
+[
+  { "id": "d1",  "restaurantId": "r1", "name": "Mushroom croquettes",     "description": "Breaded, served with mustard mayo." },
+  { "id": "d2",  "restaurantId": "r1", "name": "Pumpkin soup",            "description": "Roasted pumpkin, cream, pumpkin seed oil." },
+  { "id": "d3",  "restaurantId": "r1", "name": "Steak frites",            "description": "Sirloin, herb butter, house fries." },
+
+  { "id": "d4",  "restaurantId": "r2", "name": "Tonkotsu ramen",          "description": "Pork broth, chashu, soft egg, nori." },
+  { "id": "d5",  "restaurantId": "r2", "name": "Vegetable gyoza",         "description": "Pan-fried, six pieces, ponzu dip." },
+  { "id": "d6",  "restaurantId": "r2", "name": "Spicy miso ramen",        "description": "Miso broth, corn, chilli oil, bamboo." },
+
+  { "id": "d7",  "restaurantId": "r3", "name": "Patatas bravas",          "description": "Fried potato, smoked paprika sauce, aioli." },
+  { "id": "d8",  "restaurantId": "r3", "name": "Gambas al ajillo",        "description": "Prawns, garlic, chilli, olive oil." },
+  { "id": "d9",  "restaurantId": "r3", "name": "Tortilla española",       "description": "Potato and onion omelette, served warm." },
+
+  { "id": "d10", "restaurantId": "r4", "name": "Buddha bowl",             "description": "Quinoa, roast veg, tahini dressing." },
+  { "id": "d11", "restaurantId": "r4", "name": "Beetroot burger",         "description": "House patty, brioche bun, pickles." },
+
+  { "id": "d12", "restaurantId": "r5", "name": "Pesto genovese",          "description": "Trofie pasta, basil pesto, green beans." },
+  { "id": "d13", "restaurantId": "r5", "name": "Margherita pizza",        "description": "Tomato, mozzarella, basil." },
+  { "id": "d14", "restaurantId": "r5", "name": "Tiramisu",                "description": "Mascarpone, espresso, cocoa." },
+
+  { "id": "d15", "restaurantId": "r6", "name": "Lamb pide",               "description": "Flatbread, minced lamb, sumac onion." },
+  { "id": "d16", "restaurantId": "r6", "name": "Hummus plate",            "description": "Chickpea, tahini, warm bread." }
+]

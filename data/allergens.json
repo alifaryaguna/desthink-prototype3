@@ -1,0 +1,12 @@
+[
+  { "id": "seafood",  "name": "Seafood & shellfish", "icon": "set_meal" },
+  { "id": "peanut",   "name": "Peanuts",             "icon": "nutrition" },
+  { "id": "treenut",  "name": "Tree nuts",           "icon": "park" },
+  { "id": "gluten",   "name": "Gluten",              "icon": "bakery_dining" },
+  { "id": "dairy",    "name": "Dairy",               "icon": "water_full" },
+  { "id": "egg",      "name": "Egg",                 "icon": "egg" },
+  { "id": "soy",      "name": "Soy",                 "icon": "spa" },
+  { "id": "sesame",   "name": "Sesame",              "icon": "grain" },
+  { "id": "sulphite", "name": "Sulphites",           "icon": "science" },
+  { "id": "celery",   "name": "Celery",              "icon": "eco" }
+]

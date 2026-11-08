@@ -1,0 +1,111 @@
+/* SafeBites brand tokens → beer.css Material 3 roles.
+   The only file in the project allowed to contain hex values.
+
+   Role mapping is by FUNCTION, not by the brand's own names:
+     brand tertiary  #DA5125 orange → --primary        (buttons, active states)
+     brand secondary #C7DDE2 sky    → --secondary-*    (passive fills, badges)
+     brand primary   #0A0929 navy   → text + structure (nav, on- roles)
+     brand neutral   #F7F4EB warm   → --background / --surface
+*/
+
+:root,
+body.light {
+  /* --- raw brand values (reference only; use the roles below) --- */
+  --brand-navy:    #0A0929;
+  --brand-sky:     #C7DDE2;
+  --brand-orange:  #DA5125;
+  --brand-neutral: #F7F4EB;
+
+  /* --- interactive: orange --- */
+  --primary:                 #DA5125;
+  --on-primary:              #0A0929; /* 4.8:1 — navy, not white. See AGENTS.md */
+  --primary-container:       #F7DCD1;
+  --on-primary-container:    #0A0929;
+
+  /* --- passive fills: sky --- */
+  --secondary:               #C7DDE2;
+  --on-secondary:            #0A0929;
+  --secondary-container:     #C7DDE2;
+  --on-secondary-container:  #0A0929;
+
+  /* --- structure: navy --- */
+  --tertiary:                #0A0929;
+  --on-tertiary:             #F7F4EB;
+  --tertiary-container:      #1C1B3D;
+  --on-tertiary-container:   #F7F4EB;
+  --inverse-surface:         #0A0929;
+  --inverse-on-surface:      #F7F4EB;
+
+  /* --- ground: warm white --- */
+  --background:              #F7F4EB;
+  --on-background:           #0A0929;
+  --surface:                 #F7F4EB;
+  --on-surface:              #0A0929;
+  --surface-variant:         #EDE9DD;
+  --on-surface-variant:      #3A3952;
+  --surface-container-lowest: #FFFFFF;
+  --surface-container-low:   #F2EFE5;
+  --surface-container:       #EDE9DD;
+  --surface-container-high:  #E6E2D5;
+  --surface-container-highest:#DFDBCD;
+
+  --outline:                 #6B6A7E;
+  --outline-variant:         #C9C7D2;
+
+  --error:                   #B3261E;
+  --on-error:                #FFFFFF;
+
+  /* --- typography --- */
+  --font: 'Host Grotesk', system-ui, sans-serif;
+  --font-display: 'Racing Sans One', var(--font);
+
+  /* --- shape (beer.css radius scale) --- */
+  --rounded-sm:   4px;
+  --rounded-md:   8px;
+  --rounded-lg:   16px;  /* extension — see AGENTS.md */
+  --rounded-pill: 999px; /* extension */
+
+  /* --- spacing --- */
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px; /* extension */
+  --space-xl: 32px; /* extension */
+}
+
+body.dark {
+  --primary:                 #DA5125;
+  --on-primary:              #0A0929;
+  --primary-container:       #7A2A10;
+  --on-primary-container:    #F7F4EB;
+
+  --secondary:               #C7DDE2;
+  --on-secondary:            #0A0929;
+  --secondary-container:     #2A3C44;
+  --on-secondary-container:  #C7DDE2;
+
+  --tertiary:                #C7DDE2;
+  --on-tertiary:             #0A0929;
+
+  --background:              #0A0929;
+  --on-background:           #F7F4EB;
+  --surface:                 #0A0929;
+  --on-surface:              #F7F4EB;
+  --surface-variant:         #1C1B3D;
+  --on-surface-variant:      #C9C7D2;
+  --surface-container-lowest: #060518;
+  --surface-container-low:   #131230;
+  --surface-container:       #1C1B3D;
+  --surface-container-high:  #262549;
+  --surface-container-highest:#302F56;
+
+  --outline:                 #8E8DA0;
+  --outline-variant:         #3A3952;
+
+  --inverse-surface:         #F7F4EB;
+  --inverse-on-surface:      #0A0929;
+}
+
+h1, h2, h3, .display { font-family: var(--font); }
+h1 { font-weight: 800; }
+h2, h3 { font-weight: 600; }
+.wordmark { font-family: var(--font-display); font-style: italic; }

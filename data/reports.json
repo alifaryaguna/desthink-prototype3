@@ -1,0 +1,98 @@
+[
+  {
+    "id": "rep1",
+    "dishId": "d7",
+    "userId": "u1",
+    "suspected": ["seafood"],
+    "severity": "moderate",
+    "symptoms": "Itching around the mouth and throat within about 20 minutes.",
+    "note": "Staff told me afterwards the bravas go in the same fryer as the gambas. Nothing on the menu says so.",
+    "certainty": "likely",
+    "date": "2026-10-12",
+    "confirms": ["u3"]
+  },
+  {
+    "id": "rep2",
+    "dishId": "d7",
+    "userId": "u3",
+    "suspected": ["seafood"],
+    "severity": "mild",
+    "symptoms": "Tingling lips. Cleared up on its own.",
+    "note": "Could have been something else, I'd also had the bread.",
+    "certainty": "unsure",
+    "date": "2026-09-30",
+    "confirms": []
+  },
+  {
+    "id": "rep3",
+    "dishId": "d12",
+    "userId": "u5",
+    "suspected": ["treenut"],
+    "severity": "severe",
+    "symptoms": "Swelling, used my auto-injector. A&E visit.",
+    "note": "Pesto is usually pine nut but this one tasted of cashew. Confirmed by the kitchen afterwards.",
+    "certainty": "certain",
+    "date": "2026-08-04",
+    "confirms": ["u1"]
+  },
+  {
+    "id": "rep4",
+    "dishId": "d1",
+    "userId": "u2",
+    "suspected": ["gluten"],
+    "severity": "moderate",
+    "symptoms": "Stomach cramps for most of the next day.",
+    "note": "Listed as gluten-free on the menu board. I don't think the breadcrumb is.",
+    "certainty": "likely",
+    "date": "2026-10-28",
+    "confirms": ["u4"]
+  },
+  {
+    "id": "rep5",
+    "dishId": "d14",
+    "userId": "u4",
+    "suspected": ["egg", "dairy"],
+    "severity": "mild",
+    "symptoms": "Mild rash on my neck, gone by morning.",
+    "note": "My own fault, tiramisu obviously has both. Logging it so I remember I reacted at this level.",
+    "certainty": "certain",
+    "date": "2026-11-01",
+    "confirms": []
+  },
+  {
+    "id": "rep6",
+    "dishId": "d4",
+    "userId": "u3",
+    "suspected": ["peanut"],
+    "severity": "moderate",
+    "symptoms": "Throat tightness, took antihistamines.",
+    "note": "Asked twice, was told no peanut. Still reacted. Possibly the chilli oil.",
+    "certainty": "unsure",
+    "date": "2026-09-18",
+    "confirms": []
+  },
+  {
+    "id": "rep7",
+    "dishId": "d16",
+    "userId": "u5",
+    "suspected": ["sesame"],
+    "severity": "mild",
+    "symptoms": "Scratchy throat.",
+    "note": "Tahini is sesame, so this one is on me — but worth flagging the bread is sesame-topped too.",
+    "certainty": "certain",
+    "date": "2026-07-22",
+    "confirms": ["u2"]
+  },
+  {
+    "id": "rep8",
+    "dishId": "d10",
+    "userId": "u2",
+    "suspected": ["gluten"],
+    "severity": "mild",
+    "symptoms": "Bloating, nothing dramatic.",
+    "note": "Tahini dressing may have soy sauce in it. Didn't ask.",
+    "certainty": "unsure",
+    "date": "2026-10-05",
+    "confirms": []
+  }
+]
